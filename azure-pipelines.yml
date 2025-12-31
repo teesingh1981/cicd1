@@ -37,18 +37,3 @@ stages:
     steps:
     - script: echo "Deploying to pre-production in Job B2"
       displayName: "Pre-Production deployment step"
-
-- stage: C
-  displayName: "Stage C - Deploy"
-  jobs:
-  - job: C1
-    displayName: "Job C1 - Deploy to Staging"
-    steps:
-    - script: echo "Deploying to staging in Job B1"
-      displayName: "Staging deployment step"
-  - job: B2
-    displayName: "Job C2 - Deploy to Production"
-    steps:
-    - script: |
-    echo "Deploying to production in Job B2"
-    echo "step 2"
