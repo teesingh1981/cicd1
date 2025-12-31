@@ -6,7 +6,11 @@ pool:
 
 steps:
 - script: pwd
-  displayName: 'Run a one-line script'
+  displayName: 'Print Work Directory'
+- script: echo "Hello123" > test.txt
+  displayName: 'Create Test File'
+- script: cat /home/vsts/work/1/s/test.txt 
+  displayName: 'Show File Contents'
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
