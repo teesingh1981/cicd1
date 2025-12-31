@@ -37,3 +37,12 @@ stages:
     steps:
     - script: echo "Deploying to pre-production in Job B2"
       displayName: "Pre-Production deployment step"
+
+- stage: C
+  displayName: Stage C
+  jobs:
+  - job: C1
+    steps:
+    - script: echo Hello, world!
+    - script: echo Goodbye!
+      displayName: 'Run a one-line script'
