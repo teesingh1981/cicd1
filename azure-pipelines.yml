@@ -39,11 +39,17 @@ stages:
       displayName: "Pre-Production deployment step"
 
 - stage: C
-  displayName: "Stage C - Post Deploy"
+  displayName: "Stage C - Deploy"
   jobs:
   - job: C1
     displayName: "Stage C - Post Script"
     steps:
     - script: echo Hello, world!
+      displayName: 'Run Single-line script'
+  - job: C2
+    displayName: "Stage C - Post Script"
+    steps:
+    - script: echo Hello, world!
     - script: echo Goodbye!
+    - script: python3 --version
       displayName: 'Run Multi-line script'
