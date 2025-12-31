@@ -39,10 +39,11 @@ stages:
       displayName: "Pre-Production deployment step"
 
 - stage: C
-  displayName: Stage C
+  displayName: "Stage C - Post Deploy"
   jobs:
   - job: C1
+    displayName: "Stage C - Post Script"
     steps:
     - script: echo Hello, world!
     - script: echo Goodbye!
-      displayName: 'Run a one-line script'
+      displayName: 'Run Multi-line script'
