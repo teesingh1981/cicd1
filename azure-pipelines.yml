@@ -42,14 +42,20 @@ stages:
   displayName: "Stage C - Deploy"
   jobs:
   - job: C1
-    displayName: "Stage C - Post Script"
+    displayName: "Stage C - Post Script 1"
     steps:
     - script: echo Hello, world!
       displayName: 'Run Single-line script'
   - job: C2
-    displayName: "Stage C - Post Script"
+    displayName: "Stage C - Post Script 2"
     steps:
     - script: echo Hello, world!
+      displayName: "Post deployment step 1"
     - script: echo Goodbye!
+      displayName: "Post deployment step 2"
     - script: python3 --version
-      displayName: 'Run Multi-line script'
+      displayName: "Post deployment step 3"
+    - script: git --version
+      displayName: "Post deployment step 4"
+    - script: hostname
+      displayName: "Post deployment step 5"
